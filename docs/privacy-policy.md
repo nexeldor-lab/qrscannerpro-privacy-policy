@@ -158,7 +158,7 @@ This Privacy Policy is designed to comply with:
 
 If you have any questions, concerns, or requests regarding this Privacy Policy or our privacy practices, please contact us at:
 
-**Email:** your-email@example.com
+**Email:** nexeldor@gmail.com
 
 We will make reasonable efforts to respond to your inquiries within 30 days.
 
