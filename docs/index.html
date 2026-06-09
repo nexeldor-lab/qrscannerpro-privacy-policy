@@ -3,327 +3,1340 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="QRScannerPro Privacy Policy - Your data privacy and security matters. Learn how we protect your information with industry-leading standards.">
     <title>QRScannerPro - Privacy Policy</title>
     <style>
+        :root {
+            --primary: #667eea;
+            --primary-dark: #764ba2;
+            --primary-light: #f0f4ff;
+            --success: #28a745;
+            --warning: #ffc107;
+            --danger: #dc3545;
+            --neutral-100: #f8f9fa;
+            --neutral-200: #e9ecef;
+            --neutral-300: #dee2e6;
+            --neutral-700: #495057;
+            --neutral-900: #212529;
+            --text-primary: #1a1a1a;
+            --text-secondary: #6c757d;
+            --bg-white: #ffffff;
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+            --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
+            --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.15);
+            --shadow-xl: 0 20px 60px rgba(0, 0, 0, 0.3);
+            --radius-sm: 6px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --transition: 0.3s ease;
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 20px;
+
+        html {
+            scroll-behavior: smooth;
         }
-        
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: #fafbfc;
+        }
+
+        /* ==================== LAYOUT ==================== */
+        .layout {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 280px;
+            height: 100vh;
+            background: var(--bg-white);
+            border-right: 1px solid var(--neutral-200);
+            overflow-y: auto;
+            padding: 30px 0;
+            z-index: 100;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .sidebar::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .sidebar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .sidebar::-webkit-scrollbar-thumb {
+            background: var(--neutral-300);
+            border-radius: 3px;
+        }
+
+        .sidebar::-webkit-scrollbar-thumb:hover {
+            background: var(--neutral-200);
+        }
+
+        .main-content {
+            margin-left: 280px;
+            flex: 1;
+        }
+
+        /* ==================== SIDEBAR NAV ==================== */
+        .nav-brand {
+            padding: 0 24px 24px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--neutral-200);
+        }
+
+        .nav-brand h2 {
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--text-secondary);
+        }
+
+        .nav-group {
+            padding: 12px 12px;
+            margin: 8px 0;
+        }
+
+        .nav-group-title {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--text-secondary);
+            padding: 8px 16px;
+            margin-bottom: 8px;
+        }
+
+        .nav-link {
+            display: block;
+            padding: 10px 16px;
+            margin-bottom: 4px;
+            font-size: 13px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            border-radius: var(--radius-sm);
+            transition: all var(--transition);
+            border-left: 3px solid transparent;
+            cursor: pointer;
+        }
+
+        .nav-link:hover {
+            background: var(--primary-light);
+            color: var(--primary);
+            border-left-color: var(--primary);
+        }
+
+        .nav-link.active {
+            background: var(--primary-light);
+            color: var(--primary);
+            border-left-color: var(--primary);
+            font-weight: 600;
+        }
+
+        /* ==================== HEADER ==================== */
+        .page-header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: var(--bg-white);
+            padding: 60px 50px;
+            text-align: center;
+            margin-bottom: 0;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .page-header h1 {
+            font-size: 3em;
+            font-weight: 800;
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+        }
+
+        .page-header p {
+            font-size: 1.15em;
+            opacity: 0.95;
+            margin-bottom: 24px;
+            font-weight: 300;
+        }
+
+        .header-meta {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .meta-icon {
+            font-size: 14px;
+        }
+
+        /* ==================== MAIN CONTENT ==================== */
         .container {
             max-width: 900px;
             margin: 0 auto;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            overflow: hidden;
-        }
-        
-        header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
             padding: 50px 40px;
-            text-align: center;
         }
-        
-        header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
+
+        /* ==================== HERO SECTION ==================== */
+        .hero-section {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.08) 0%, rgba(118, 75, 162, 0.08) 100%);
+            border-left: 4px solid var(--primary);
+            padding: 30px;
+            border-radius: var(--radius-md);
+            margin-bottom: 50px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
         }
-        
-        header p {
-            font-size: 1.1em;
-            opacity: 0.9;
+
+        .hero-icon {
+            font-size: 40px;
+            line-height: 1;
+            flex-shrink: 0;
         }
-        
-        .last-updated {
-            text-align: center;
-            padding: 20px 40px;
-            background: #f8f9fa;
-            color: #666;
-            font-size: 0.9em;
+
+        .hero-text h2 {
+            font-size: 1.3em;
+            margin-bottom: 8px;
+            color: var(--primary);
         }
-        
-        main {
-            padding: 40px;
+
+        .hero-text p {
+            font-size: 0.95em;
+            color: var(--text-secondary);
+            line-height: 1.5;
         }
-        
-        .toc {
-            background: #f0f4ff;
-            border-left: 4px solid #667eea;
-            padding: 20px;
-            margin: 30px 0;
-            border-radius: 6px;
+
+        /* ==================== SECTIONS ==================== */
+        section {
+            margin-bottom: 60px;
         }
-        
-        .toc h2 {
-            color: #667eea;
-            margin-bottom: 15px;
+
+        section h2 {
+            font-size: 1.8em;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 12px;
+            padding-bottom: 16px;
+            border-bottom: 3px solid var(--primary);
+            display: inline-block;
+        }
+
+        section h3 {
             font-size: 1.2em;
+            font-weight: 600;
+            color: var(--primary-dark);
+            margin: 24px 0 12px 0;
         }
-        
-        .toc ol {
-            list-style-position: inside;
-            padding-left: 20px;
+
+        section h4 {
+            font-size: 1em;
+            font-weight: 600;
+            color: var(--primary);
+            margin: 16px 0 8px 0;
         }
-        
-        .toc li {
-            margin: 8px 0;
+
+        section p {
+            margin-bottom: 16px;
+            color: var(--text-primary);
+            line-height: 1.7;
         }
-        
-        .toc a {
-            color: #667eea;
-            text-decoration: none;
-            transition: color 0.3s;
+
+        section ul, section ol {
+            margin-left: 24px;
+            margin-bottom: 16px;
         }
-        
-        .toc a:hover {
-            color: #764ba2;
-            text-decoration: underline;
+
+        section li {
+            margin-bottom: 10px;
+            color: var(--text-primary);
+            line-height: 1.6;
         }
-        
-        h2 {
-            color: #667eea;
-            margin: 30px 0 15px 0;
-            font-size: 1.5em;
-            border-bottom: 2px solid #667eea;
-            padding-bottom: 10px;
+
+        /* ==================== FEATURE BOXES ==================== */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
         }
-        
-        h3 {
-            color: #764ba2;
-            margin: 20px 0 10px 0;
-            font-size: 1.1em;
+
+        .feature-box {
+            background: var(--bg-white);
+            border: 1px solid var(--neutral-200);
+            border-radius: var(--radius-md);
+            padding: 24px;
+            transition: all var(--transition);
+            cursor: default;
         }
-        
-        p {
-            margin-bottom: 15px;
+
+        .feature-box:hover {
+            border-color: var(--primary);
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
         }
-        
-        ul, ol {
-            margin-left: 25px;
-            margin-bottom: 15px;
+
+        .feature-box-icon {
+            font-size: 32px;
+            margin-bottom: 12px;
         }
-        
-        li {
+
+        .feature-box h4 {
+            font-size: 1.05em;
             margin-bottom: 8px;
         }
-        
-        .highlight {
-            background: #fff3cd;
-            border-left: 4px solid #ffc107;
-            padding: 15px;
-            margin: 20px 0;
-            border-radius: 4px;
-        }
-        
-        .privacy-badge {
-            display: inline-block;
-            background: #28a745;
-            color: white;
-            padding: 8px 15px;
-            border-radius: 20px;
+
+        .feature-box p {
             font-size: 0.9em;
+            color: var(--text-secondary);
+            margin: 0;
+        }
+
+        /* ==================== DATA COLLECTION CARD ==================== */
+        .data-category {
+            background: var(--bg-white);
+            border-left: 4px solid var(--primary);
+            border-radius: var(--radius-md);
+            padding: 20px;
+            margin-bottom: 16px;
+            box-shadow: var(--shadow-sm);
+            transition: all var(--transition);
+        }
+
+        .data-category:hover {
+            box-shadow: var(--shadow-md);
+            border-left-color: var(--primary-dark);
+        }
+
+        .data-category h4 {
+            margin-top: 0;
+        }
+
+        .data-collected {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
             margin: 20px 0;
+        }
+
+        .data-item {
+            background: var(--primary-light);
+            border: 1px solid var(--primary);
+            border-radius: var(--radius-sm);
+            padding: 12px 16px;
+            font-size: 0.9em;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .data-item.negative {
+            background: #ffe9e9;
+            border-color: var(--danger);
+        }
+
+        .data-item-icon {
             font-weight: bold;
+            color: var(--primary);
         }
-        
-        .contact-section {
-            background: #f0f4ff;
-            border: 2px solid #667eea;
-            padding: 25px;
-            border-radius: 8px;
+
+        .data-item.negative .data-item-icon {
+            color: var(--danger);
+        }
+
+        /* ==================== HIGHLIGHT BOXES ==================== */
+        .highlight {
+            background: linear-gradient(135deg, #fff3cd 0%, #fffbec 100%);
+            border-left: 4px solid var(--warning);
+            border-radius: var(--radius-md);
+            padding: 20px;
+            margin: 24px 0;
+        }
+
+        .highlight.success {
+            background: linear-gradient(135deg, #d4edda 0%, #f0f7f4 100%);
+            border-left-color: var(--success);
+        }
+
+        .highlight.info {
+            background: linear-gradient(135deg, #d1ecf1 0%, #f0f8fa 100%);
+            border-left-color: #17a2b8;
+        }
+
+        .highlight strong {
+            color: var(--primary);
+        }
+
+        .highlight.success strong {
+            color: var(--success);
+        }
+
+        .highlight.info strong {
+            color: #17a2b8;
+        }
+
+        /* ==================== CONTACT SECTION ==================== */
+        .contact-card {
+            background: linear-gradient(135deg, var(--primary-light) 0%, rgba(118, 75, 162, 0.05) 100%);
+            border: 2px solid var(--primary);
+            border-radius: var(--radius-md);
+            padding: 32px;
             margin: 30px 0;
+            text-align: center;
         }
-        
-        .contact-section h3 {
-            color: #667eea;
+
+        .contact-card h3 {
+            color: var(--primary);
+            margin-top: 0;
         }
-        
-        .contact-section p {
-            font-size: 1.05em;
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .contact-item {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .contact-item p {
+            font-size: 0.9em;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+        }
+
+        .contact-item a {
+            color: var(--primary);
+            font-weight: 600;
+            text-decoration: none;
+            transition: color var(--transition);
+        }
+
+        .contact-item a:hover {
+            color: var(--primary-dark);
+            text-decoration: underline;
+        }
+
+        /* ==================== RIGHTS SUMMARY ==================== */
+        .rights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 16px;
+            margin: 24px 0;
+        }
+
+        .right-item {
+            background: var(--primary-light);
+            border: 1px solid var(--primary);
+            border-radius: var(--radius-sm);
+            padding: 16px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .right-item-check {
+            color: var(--success);
+            font-weight: bold;
+            font-size: 1.3em;
+            flex-shrink: 0;
+            margin-top: -2px;
+        }
+
+        .right-item-text {
+            font-size: 0.9em;
+            line-height: 1.5;
+        }
+
+        /* ==================== TABLES ==================== */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 24px 0;
+            background: var(--bg-white);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+
+        table thead {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: var(--bg-white);
+        }
+
+        table th {
+            padding: 16px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.9em;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        table td {
+            padding: 14px 16px;
+            border-top: 1px solid var(--neutral-200);
+        }
+
+        table tbody tr:hover {
+            background: var(--neutral-100);
+        }
+
+        table tbody tr:nth-child(even) {
+            background: var(--neutral-100);
+        }
+
+        /* ==================== BADGES & LABELS ==================== */
+        .badge {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: 600;
+            margin: 8px 4px 8px 0;
+        }
+
+        .badge.primary {
+            background: var(--primary);
+            color: var(--bg-white);
+        }
+
+        .badge.success {
+            background: var(--success);
+            color: var(--bg-white);
+        }
+
+        .badge.warning {
+            background: var(--warning);
             color: #333;
         }
-        
-        .contact-section a {
-            color: #667eea;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-        
-        .contact-section a:hover {
-            color: #764ba2;
-        }
-        
-        footer {
-            background: #f8f9fa;
-            border-top: 1px solid #ddd;
-            padding: 30px 40px;
+
+        /* ==================== FOOTER ==================== */
+        .page-footer {
+            background: linear-gradient(135deg, var(--neutral-900) 0%, #2d3748 100%);
+            color: var(--neutral-200);
+            padding: 40px;
             text-align: center;
-            color: #666;
+            border-top: 1px solid var(--neutral-300);
+            margin-top: 60px;
+        }
+
+        .page-footer p {
+            margin-bottom: 12px;
             font-size: 0.9em;
         }
-        
-        hr {
-            border: none;
-            border-top: 2px solid #ddd;
-            margin: 40px 0;
+
+        .page-footer a {
+            color: var(--primary);
+            text-decoration: none;
         }
-        
-        strong {
-            color: #667eea;
+
+        .page-footer a:hover {
+            text-decoration: underline;
         }
-        
+
+        .footer-meta {
+            font-size: 0.8em;
+            color: var(--text-secondary);
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid var(--neutral-300);
+        }
+
+        /* ==================== RESPONSIVE ==================== */
+        @media (max-width: 1024px) {
+            .sidebar {
+                width: 240px;
+            }
+
+            .main-content {
+                margin-left: 240px;
+            }
+
+            .page-header h1 {
+                font-size: 2.2em;
+            }
+
+            .container {
+                padding: 40px 30px;
+            }
+        }
+
         @media (max-width: 768px) {
-            header h1 {
+            .layout {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                position: relative;
+                width: 100%;
+                height: auto;
+                border-right: none;
+                border-bottom: 1px solid var(--neutral-200);
+                padding: 20px;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 30px;
+            }
+
+            .nav-brand {
+                flex: 1 100%;
+                padding: 0 0 16px;
+                border-bottom: 1px solid var(--neutral-200);
+                margin-bottom: 12px;
+            }
+
+            .nav-group {
+                flex: 1 1 45%;
+                padding: 8px;
+                margin: 0;
+            }
+
+            .main-content {
+                margin-left: 0;
+            }
+
+            .page-header {
+                padding: 40px 24px;
+            }
+
+            .page-header h1 {
                 font-size: 1.8em;
             }
-            
-            main {
-                padding: 25px;
+
+            .page-header p {
+                font-size: 1em;
             }
-            
-            h2 {
+
+            .header-meta {
+                gap: 16px;
+                font-size: 0.85em;
+            }
+
+            .container {
+                padding: 30px 20px;
+            }
+
+            section h2 {
+                font-size: 1.5em;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            .rights-grid {
+                grid-template-columns: 1fr;
+            }
+
+            table {
+                font-size: 0.85em;
+            }
+
+            table th, table td {
+                padding: 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .sidebar {
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            .nav-group {
+                flex: 1 100%;
+            }
+
+            .page-header {
+                padding: 30px 16px;
+            }
+
+            .page-header h1 {
+                font-size: 1.5em;
+            }
+
+            .container {
+                padding: 20px 16px;
+            }
+
+            section h2 {
                 font-size: 1.3em;
             }
+
+            .hero-section {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        /* ==================== SCROLLBAR ==================== */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--neutral-300);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--neutral-200);
+        }
+
+        /* ==================== PRINT STYLES ==================== */
+        @media print {
+            .sidebar, .page-header::after {
+                display: none;
+            }
+
+            .main-content {
+                margin-left: 0;
+            }
+
+            body {
+                background: var(--bg-white);
+            }
+        }
+
+        /* ==================== ANIMATIONS ==================== */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        section {
+            animation: fadeInUp 0.5s ease;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>🔒 QRScannerPro</h1>
-            <p>Privacy Policy</p>
-        </header>
-        
-        <div class="last-updated">
-            <strong>Last Updated:</strong> May 16, 2026
-        </div>
-        
-        <main>
-            <div class="privacy-badge">✓ Privacy First Design</div>
-            
-            <h2>Overview</h2>
-            <p>QRScannerPro is designed with privacy as a core principle. We are committed to protecting your privacy and ensuring you have a positive experience on our Android application. This Privacy Policy explains our practices regarding data collection, use, and protection.</p>
-            
-            <div class="toc">
-                <h2 style="margin-top: 0; border: none;">📋 Table of Contents</h2>
-                <ol>
-                    <li><a href="#what-we-collect">What Data We Collect</a></li>
-                    <li><a href="#how-it-works">How the App Works</a></li>
-                    <li><a href="#data-storage">Data Storage</a></li>
-                    <li><a href="#third-party">No Third-Party Services</a></li>
-                    <li><a href="#your-rights">Your Rights</a></li>
-                    <li><a href="#security">Security</a></li>
-                    <li><a href="#children">Children's Privacy</a></li>
-                    <li><a href="#changes">Changes to This Policy</a></li>
-                    <li><a href="#compliance">Legal Compliance</a></li>
-                    <li><a href="#contact">Contact Us</a></li>
-                </ol>
+    <div class="layout">
+        <!-- SIDEBAR NAVIGATION -->
+        <aside class="sidebar">
+            <div class="nav-brand">
+                <h2>🔒 QRScannerPro</h2>
             </div>
-            
-            <h2 id="what-we-collect">1. What Data We Collect</h2>
-            <p><strong>The Short Answer:</strong> We collect NO personal information and NO device data.</p>
-            <p>QRScannerPro does not collect, store, or transmit any:</p>
-            <ul>
-                <li>Personal identification information (name, email, phone number, etc.)</li>
-                <li>Device identifiers (device ID, IMEI, MAC address, etc.)</li>
-                <li>Location data</li>
-                <li>Analytics or usage data</li>
-                <li>Crash reports or performance data</li>
-                <li>Advertising data</li>
-            </ul>
-            
-            <h2 id="how-it-works">2. How the App Works</h2>
-            <p>When you use QRScannerPro, you can:</p>
-            <ul>
-                <li><strong>Scan QR codes</strong> containing WiFi details</li>
-                <li><strong>Generate QR codes</strong> with WiFi information</li>
-            </ul>
-            <p>All WiFi details from scanned or generated QR codes are stored <strong>exclusively on your device</strong> in your phone's local storage. This data never leaves your phone.</p>
-            
-            <h2 id="data-storage">3. Data Storage</h2>
-            <ul>
-                <li><strong>Where:</strong> All data is stored locally on your Android device only</li>
-                <li><strong>Who can access:</strong> Only you, through QRScannerPro</li>
-                <li><strong>Cloud sync:</strong> None - your data never goes to our servers or anywhere else</li>
-                <li><strong>Deletion:</strong> You can delete any data anytime through the app's data management features</li>
-            </ul>
-            
-            <h2 id="third-party">4. No Third-Party Services</h2>
-            <p>QRScannerPro does <strong>not</strong> use:</p>
-            <ul>
-                <li>Analytics services</li>
-                <li>Crash reporting tools</li>
-                <li>Advertising networks</li>
-                <li>Cloud storage services</li>
-                <li>Any other third-party data processors</li>
-            </ul>
-            
-            <h2 id="your-rights">5. Your Rights</h2>
-            
-            <h3>Data Access</h3>
-            <p>You have full access to any data stored in QRScannerPro on your device.</p>
-            
-            <h3>Data Deletion</h3>
-            <p>You can delete any WiFi details or generated QR codes at any time through the app.</p>
-            
-            <h3>Data Portability</h3>
-            <p>Since all data is stored locally on your device, you maintain complete control and portability of your information.</p>
-            
-            <h2 id="security">6. Security</h2>
-            <p>While we don't collect data, the security of your local device is important. We recommend:</p>
-            <ul>
-                <li>Keeping your Android device and QRScannerPro updated</li>
-                <li>Using device-level security features (screen lock, encryption)</li>
-                <li>Backing up important WiFi QR codes if needed</li>
-            </ul>
-            
-            <h2 id="children">7. Children's Privacy</h2>
-            <p>QRScannerPro is designed for general use. Since we collect no personal information, we do not knowingly collect data from children under 13. If you believe a child's data has been collected, please contact us.</p>
-            
-            <h2 id="changes">8. Changes to This Policy</h2>
-            <p>We may update this Privacy Policy from time to time. We will notify users of any material changes by updating the "Last Updated" date at the top of this policy.</p>
-            
-            <h2 id="compliance">9. Legal Compliance</h2>
-            <p>This Privacy Policy is designed to comply with:</p>
-            <ul>
-                <li><strong>GDPR</strong> (General Data Protection Regulation)</li>
-                <li><strong>CCPA</strong> (California Consumer Privacy Act)</li>
-                <li><strong>COPPA</strong> (Children's Online Privacy Protection Act)</li>
-                <li>Google Play Store privacy requirements</li>
-            </ul>
-            
-            <h2 id="contact">10. Contact Us</h2>
-            <div class="contact-section">
-                <h3>📧 Get in Touch</h3>
-                <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our privacy practices, please contact us:</p>
-                <p><strong>Email:</strong> <a href="mailto:your-email@example.com">your-email@example.com</a></p>
-                <p>We will make reasonable efforts to respond to your inquiries within 30 days.</p>
+
+            <div class="nav-group">
+                <div class="nav-group-title">Policy</div>
+                <a href="#overview" class="nav-link active">Overview</a>
+                <a href="#data-collection" class="nav-link">Data Collection</a>
+                <a href="#third-party" class="nav-link">Third-Party Services</a>
+                <a href="#rights" class="nav-link">Your Rights</a>
             </div>
-            
-            <hr>
-            
-            <div class="highlight">
-                <strong>🔐 Your privacy is our priority.</strong><br>
-                QRScannerPro respects your data by simply not collecting it.
+
+            <div class="nav-group">
+                <div class="nav-group-title">Regulations</div>
+                <a href="#gdpr" class="nav-link">GDPR Rights</a>
+                <a href="#ccpa" class="nav-link">CCPA Rights</a>
+                <a href="#compliance" class="nav-link">Global Compliance</a>
             </div>
+
+            <div class="nav-group">
+                <div class="nav-group-title">Management</div>
+                <a href="#retention" class="nav-link">Data Retention</a>
+                <a href="#security" class="nav-link">Security</a>
+                <a href="#contact" class="nav-link">Contact Us</a>
+            </div>
+
+            <div class="nav-group">
+                <div class="nav-group-title">Resources</div>
+                <a href="#permissions" class="nav-link">Permissions</a>
+                <a href="#quick-ref" class="nav-link">Quick Reference</a>
+                <a href="#versions" class="nav-link">Versions</a>
+            </div>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+            <!-- PAGE HEADER -->
+            <header class="page-header">
+                <h1>🔒 QRScannerPro</h1>
+                <p>Privacy Policy & Your Data Rights</p>
+                <div class="header-meta">
+                    <div class="meta-item">
+                        <span class="meta-icon">📅</span>
+                        <span><strong>Last Updated:</strong> June 9, 2026</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-icon">📌</span>
+                        <span><strong>Version:</strong> 1.3.0</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-icon">⚖️</span>
+                        <span><strong>Effective:</strong> June 9, 2026</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- CONTAINER -->
+            <div class="container">
+                <!-- HERO SECTION -->
+                <div class="hero-section">
+                    <div class="hero-icon">🛡️</div>
+                    <div class="hero-text">
+                        <h2>Privacy First Design</h2>
+                        <p>QRScannerPro is built with privacy as a core principle. We collect minimal data, encrypt everything, and give you complete control over your information. Your data never leaves your device.</p>
+                    </div>
+                </div>
+
+                <!-- OVERVIEW SECTION -->
+                <section id="overview">
+                    <h2>Overview</h2>
+                    <p>QRScannerPro ("App", "we", "us", "our") is committed to protecting your privacy. This Privacy Policy explains our practices regarding data collection, usage, and your rights as a user of the QRScannerPro application.</p>
+                    <p>The App is designed with privacy as a core principle. We collect minimal data necessary to provide core functionality and comply with platform requirements.</p>
+
+                    <div class="feature-grid">
+                        <div class="feature-box">
+                            <div class="feature-box-icon">🔐</div>
+                            <h4>Encrypted Storage</h4>
+                            <p>All your data is encrypted with AES-256 on your device. No external servers involved.</p>
+                        </div>
+                        <div class="feature-box">
+                            <div class="feature-box-icon">📱</div>
+                            <h4>Local Processing</h4>
+                            <p>Your scan history stays on your phone. Complete control. Complete privacy.</p>
+                        </div>
+                        <div class="feature-box">
+                            <div class="feature-box-icon">👤</div>
+                            <h4>No Tracking</h4>
+                            <p>We don't track you, identify you, or build profiles. Ever.</p>
+                        </div>
+                        <div class="feature-box">
+                            <div class="feature-box-icon">✂️</div>
+                            <h4>Instant Deletion</h4>
+                            <p>Delete any data instantly. No waiting, no questions asked.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- DATA COLLECTION SECTION -->
+                <section id="data-collection">
+                    <h2>Data Collection & Usage</h2>
+
+                    <h3>What Data We Collect</h3>
+
+                    <div class="data-category">
+                        <h4>📋 Scan History (Local Storage)</h4>
+                        <p><strong>What:</strong> QR/Barcode content, URLs, decoded data, timestamps</p>
+                        <p><strong>Where:</strong> Stored locally on your device using SQLCipher encryption</p>
+                        <p><strong>Why:</strong> Allow you to view, search, and organize your scan history</p>
+                        <p><strong>Control:</strong> Delete anytime through Settings → Data → Clear History</p>
+                        <div class="data-collected">
+                            <div class="data-item">✓ QR content & URLs</div>
+                            <div class="data-item">✓ Scan timestamps</div>
+                            <div class="data-item">✓ Format type</div>
+                            <div class="data-item">✓ Scan results</div>
+                        </div>
+                    </div>
+
+                    <div class="data-category">
+                        <h4>⚙️ App Preferences & Settings</h4>
+                        <p><strong>What:</strong> Language, theme, feature settings</p>
+                        <p><strong>Where:</strong> DataStore Preferences (encrypted)</p>
+                        <p><strong>Why:</strong> Personalize your app experience</p>
+                        <div class="data-collected">
+                            <div class="data-item">✓ Language choice</div>
+                            <div class="data-item">✓ Theme preference</div>
+                            <div class="data-item">✓ Feature config</div>
+                        </div>
+                    </div>
+
+                    <div class="data-category">
+                        <h4>🔐 Biometric Data (Pro Features)</h4>
+                        <p><strong>What:</strong> Fingerprint/Face Recognition</p>
+                        <p><strong>Where:</strong> Never leaves your device; processed by Android's API</p>
+                        <p><strong>Why:</strong> Optional secure app access</p>
+                        <p><strong>Control:</strong> Optional feature - enable/disable anytime</p>
+                    </div>
+
+                    <div class="data-category">
+                        <h4>📱 Device Information</h4>
+                        <p><strong>What:</strong> Device model, OS version, API level</p>
+                        <p><strong>Why:</strong> Improve compatibility and crash reporting</p>
+                        <p><strong>Sharing:</strong> Only with Google when errors occur</p>
+                    </div>
+
+                    <h3>Data We Don't Collect</h3>
+                    <div class="data-collected">
+                        <div class="data-item negative">❌ Names, emails, phone numbers</div>
+                        <div class="data-item negative">❌ Location or GPS data</div>
+                        <div class="data-item negative">❌ Contacts or call logs</div>
+                        <div class="data-item negative">❌ Usage analytics/behavior</div>
+                        <div class="data-item negative">❌ Browsing history</div>
+                        <div class="data-item negative">❌ Profile information</div>
+                        <div class="data-item negative">❌ Passwords or credentials</div>
+                    </div>
+                </section>
+
+                <!-- THIRD PARTY SECTION -->
+                <section id="third-party">
+                    <h2>Third-Party Integrations</h2>
+
+                    <h3>🔗 Google Safe Browsing API</h3>
+                    <p><strong>Purpose:</strong> Detect malware and phishing in QR codes</p>
+                    <p><strong>Data Shared:</strong> Only the URL content (not your identity)</p>
+                    <p><strong>Encryption:</strong> HTTPS encrypted transmission</p>
+                    <p><strong>Opt-Out:</strong> Settings → Scanning → Safe Browsing</p>
+                    <div class="highlight success">
+                        <strong>✓ What's Protected:</strong> Your personal information is never associated with these checks
+                    </div>
+
+                    <h3>📺 Google Mobile Ads (Free Version)</h3>
+                    <p><strong>Purpose:</strong> Display non-intrusive ads to free users</p>
+                    <p><strong>Data Shared:</strong> Anonymized Advertising ID, general location, ad interactions</p>
+                    <p><strong>User Consent:</strong> UMP consent flow on first launch with full opt-out options</p>
+                    <p><strong>Pro Version:</strong> No ads for premium users</p>
+
+                    <h3>✅ Google User Messaging Platform (UMP)</h3>
+                    <p><strong>Purpose:</strong> Manage GDPR/CCPA compliance for regulated regions</p>
+                    <p><strong>Control:</strong> Transparent consent with easy opt-out</p>
+                    <p><strong>Storage:</strong> Consent stored locally on your device</p>
+
+                    <h3>💳 Google Play Billing</h3>
+                    <p><strong>Purpose:</strong> Process Pro membership purchases (one-time)</p>
+                    <p><strong>Security:</strong> Google Play Billing Client handles all sensitive data</p>
+                    <p><strong>Protection:</strong> Compliant with PCI DSS standards</p>
+                </section>
+
+                <!-- RIGHTS SECTION -->
+                <section id="rights">
+                    <h2>Your Privacy Rights</h2>
+
+                    <h3 id="gdpr">🇪🇺 If You're in the EU/EEA (GDPR)</h3>
+                    <p>You have comprehensive rights under GDPR Articles 15-22:</p>
+
+                    <div class="rights-grid">
+                        <div class="right-item">
+                            <div class="right-item-check">✓</div>
+                            <div class="right-item-text"><strong>Access:</strong> Know what data we hold</div>
+                        </div>
+                        <div class="right-item">
+                            <div class="right-item-check">✓</div>
+                            <div class="right-item-text"><strong>Deletion:</strong> Erase your data anytime</div>
+                        </div>
+                        <div class="right-item">
+                            <div class="right-item-check">✓</div>
+                            <div class="right-item-text"><strong>Rectification:</strong> Correct inaccuracies</div>
+                        </div>
+                        <div class="right-item">
+                            <div class="right-item-check">✓</div>
+                            <div class="right-item-text"><strong>Restriction:</strong> Limit processing</div>
+                        </div>
+                        <div class="right-item">
+                            <div class="right-item-check">✓</div>
+                            <div class="right-item-text"><strong>Portability:</strong> Export your data</div>
+                        </div>
+                        <div class="right-item">
+                            <div class="right-item-check">✓</div>
+                            <div class="right-item-text"><strong>Object:</strong> Opt-out anytime</div>
+                        </div>
+                    </div>
+
+                    <div class="highlight info">
+                        <strong>⚖️ How to Exercise:</strong> Use Settings → Data → Export (CSV/JSON), or email <a href="mailto:nexeldor@gmail.com">nexeldor@gmail.com</a>
+                    </div>
+
+                    <h3 id="ccpa">🏛️ If You're in California (CCPA)</h3>
+                    <p>You have the following rights under CCPA and CalOPPA:</p>
+
+                    <div class="rights-grid">
+                        <div class="right-item">
+                            <div class="right-item-check">✓</div>
+                            <div class="right-item-text"><strong>Know:</strong> What we collect</div>
+                        </div>
+                        <div class="right-item">
+                            <div class="right-item-check">✓</div>
+                            <div class="right-item-text"><strong>Delete:</strong> Your personal data</div>
+                        </div>
+                        <div class="right-item">
+                            <div class="right-item-check">✓</div>
+                            <div class="right-item-text"><strong>Opt-Out:</strong> Data sale/sharing</div>
+                        </div>
+                        <div class="right-item">
+                            <div class="right-item-check">✓</div>
+                            <div class="right-item-text"><strong>Non-Discrimination:</strong> Equal service</div>
+                        </div>
+                    </div>
+
+                    <p><strong>Important:</strong> We don't sell personal data. Your data rights can be exercised through in-app settings or by contacting us.</p>
+                </section>
+
+                <!-- DATA RETENTION SECTION -->
+                <section id="retention">
+                    <h2>Data Retention & Deletion</h2>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Data Type</th>
+                                <th>Storage</th>
+                                <th>Duration</th>
+                                <th>Deletion Method</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Scan History</strong></td>
+                                <td>Local device</td>
+                                <td>Until deleted</td>
+                                <td>Settings → Data → Clear</td>
+                            </tr>
+                            <tr>
+                                <td><strong>App Preferences</strong></td>
+                                <td>Encrypted storage</td>
+                                <td>While app installed</td>
+                                <td>Settings → Apps → Clear Data</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Ad Data (Google)</strong></td>
+                                <td>Google servers</td>
+                                <td>~13 months</td>
+                                <td><a href="https://myaccount.google.com" target="_blank">Google Account Settings</a></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Consent (UMP)</strong></td>
+                                <td>Local device</td>
+                                <td>Until withdrawn</td>
+                                <td>Settings → Privacy → Consent</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="highlight">
+                        <strong>💡 Pro Tip:</strong> App uninstall automatically deletes all local data. No manual cleanup needed.
+                    </div>
+                </section>
+
+                <!-- SECURITY SECTION -->
+                <section id="security">
+                    <h2>Data Security</h2>
+
+                    <h3>Encryption & Protection</h3>
+                    <div class="feature-grid">
+                        <div class="feature-box">
+                            <div class="feature-box-icon">🔒</div>
+                            <h4>AES-256 Encryption</h4>
+                            <p>SQLCipher encrypts your local database with military-grade encryption</p>
+                        </div>
+                        <div class="feature-box">
+                            <div class="feature-box-icon">🔐</div>
+                            <h4>Secure Storage</h4>
+                            <p>DataStore uses encrypted SharedPreferences for all settings</p>
+                        </div>
+                        <div class="feature-box">
+                            <div class="feature-box-icon">👆</div>
+                            <h4>Biometric Lock</h4>
+                            <p>Optional fingerprint/face recognition for app access</p>
+                        </div>
+                        <div class="feature-box">
+                            <div class="feature-box-icon">🔏</div>
+                            <h4>API Security</h4>
+                            <p>All external calls use HTTPS with TLS 1.2+ encryption</p>
+                        </div>
+                    </div>
+
+                    <h3>Your Responsibility</h3>
+                    <ul>
+                        <li>Keep your Android device updated and patched</li>
+                        <li>Use a strong device PIN/password</li>
+                        <li>Install only from official Google Play Store</li>
+                        <li>Maintain physical device security</li>
+                        <li>Disable app when concerned about privacy</li>
+                    </ul>
+
+                    <div class="highlight info">
+                        <strong>🛡️ Note:</strong> No system is 100% secure. We implement industry-standard protection, but your device security is the final layer.
+                    </div>
+                </section>
+
+                <!-- PERMISSIONS SECTION -->
+                <section id="permissions">
+                    <h2>App Permissions Explained</h2>
+
+                    <h3>Required Permissions</h3>
+                    <div class="data-category">
+                        <h4>📷 CAMERA</h4>
+                        <p>Used for QR code and barcode scanning. No recordings, transfers, or background access.</p>
+                    </div>
+                    <div class="data-category">
+                        <h4>🌐 INTERNET</h4>
+                        <p>Used for Google Safe Browsing, ads delivery, UMP consent, and crash reporting.</p>
+                    </div>
+                    <div class="data-category">
+                        <h4>📳 VIBRATE</h4>
+                        <p>Used for haptic feedback on successful scan completion.</p>
+                    </div>
+
+                    <h3>Optional Permissions</h3>
+                    <div class="data-category">
+                        <h4>🖼️ Gallery Access</h4>
+                        <p>Uses modern photo picker on Android 13+. No explicit permission needed.</p>
+                    </div>
+                    <div class="data-category">
+                        <h4>👆 Biometric</h4>
+                        <p>Optional for Pro app lock feature. Only for local authentication.</p>
+                    </div>
+
+                    <h3>Permissions We Never Request</h3>
+                    <div class="data-collected">
+                        <div class="data-item negative">❌ Phone numbers or call logs</div>
+                        <div class="data-item negative">❌ Contacts or SMS</div>
+                        <div class="data-item negative">❌ Location or GPS</div>
+                        <div class="data-item negative">❌ Calendar or reminders</div>
+                        <div class="data-item negative">❌ Social media accounts</div>
+                    </div>
+                </section>
+
+                <!-- COMPLIANCE SECTION -->
+                <section id="compliance">
+                    <h2>Global Privacy Compliance</h2>
+
+                    <h3>We Comply With:</h3>
+                    <div class="feature-grid">
+                        <div class="feature-box">
+                            <div class="feature-box-icon">🇪🇺</div>
+                            <h4>GDPR</h4>
+                            <p>General Data Protection Regulation (EU/EEA)</p>
+                        </div>
+                        <div class="feature-box">
+                            <div class="feature-box-icon">🏛️</div>
+                            <h4>CCPA</h4>
+                            <p>California Consumer Privacy Act</p>
+                        </div>
+                        <div class="feature-box">
+                            <div class="feature-box-icon">👨‍👩‍👧</div>
+                            <h4>COPPA</h4>
+                            <p>Children's Online Privacy Protection Act</p>
+                        </div>
+                        <div class="feature-box">
+                            <div class="feature-box-icon">📋</div>
+                            <h4>CalOPPA</h4>
+                            <p>California Online Privacy Protection Act</p>
+                        </div>
+                    </div>
+
+                    <h3>Other Jurisdictions</h3>
+                    <ul>
+                        <li><strong>China (PIPL):</strong> Minimal data collection with all data stored locally</li>
+                        <li><strong>Brazil (LGPD):</strong> Transparent consent management via UMP</li>
+                        <li><strong>South Korea (PIPA):</strong> Full data protection compliance</li>
+                        <li><strong>Canada (PIPEDA):</strong> Privacy practices aligned with standards</li>
+                    </ul>
+                </section>
+
+                <!-- CONTACT SECTION -->
+                <section id="contact">
+                    <h2>Contact & Data Requests</h2>
+
+                    <div class="contact-card">
+                        <h3>📧 Get In Touch</h3>
+                        <p>Questions about our privacy practices? We're here to help.</p>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <p>Email</p>
+                                <a href="mailto:nexeldor@gmail.com">nexeldor@gmail.com</a>
+                            </div>
+                            <div class="contact-item">
+                                <p>GitHub</p>
+                                <a href="https://github.com/panosgdev/QRScannerPro/issues" target="_blank">Report Issue</a>
+                            </div>
+                            <div class="contact-item">
+                                <p>Response Time</p>
+                                <span>14-30 days</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>Data Subject Access Request (DSAR)</h3>
+                    <ol>
+                        <li>Send written request to <a href="mailto:nexeldor@gmail.com">nexeldor@gmail.com</a></li>
+                        <li>Include: App version, usage period, device info</li>
+                        <li>Response within 30 days (as required by law)</li>
+                        <li>Most data is stored locally—use app export feature first</li>
+                        <li>We may request proof of identity for verification</li>
+                    </ol>
+
+                    <h3>Deletion Request</h3>
+                    <ol>
+                        <li>Delete all local data: Settings → Data → Clear All</li>
+                        <li>For cloud data: Email <a href="mailto:nexeldor@gmail.com">nexeldor@gmail.com</a></li>
+                        <li>Confirmation provided within 14 days</li>
+                    </ol>
+                </section>
+
+                <!-- QUICK REFERENCE SECTION -->
+                <section id="quick-ref">
+                    <h2>Quick Reference Guide</h2>
+                    <p>Common tasks and how to complete them:</p>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Action</th>
+                                <th>How to Do It</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Delete History</strong></td>
+                                <td>Settings → Data → Clear History</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Export Data</strong></td>
+                                <td>Settings → Data → Export (CSV/JSON)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Manage Ads</strong></td>
+                                <td>Settings → Advertising → Manage Ads</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Disable Biometric</strong></td>
+                                <td>Settings → Security → App Lock (toggle off)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Reset Advertising ID</strong></td>
+                                <td>Settings → Google → Ads Settings</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Withdraw Consent</strong></td>
+                                <td>Settings → Privacy → Consent Preferences</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Opt-Out Personalized Ads</strong></td>
+                                <td>Settings → Privacy → Ad Personalization (toggle off)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Report Privacy Issue</strong></td>
+                                <td>Settings → Help & Feedback → Report Issue</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <!-- VERSIONS SECTION -->
+                <section id="versions">
+                    <h2>Policy Versions</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Version</th>
+                                <th>Date</th>
+                                <th>Changes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>1.3.0</strong></td>
+                                <td>June 9, 2026</td>
+                                <td>UMP integration, GDPR/CCPA enhancement, AdMob v23.6.0, security improvements, comprehensive data deletion options</td>
+                            </tr>
+                            <tr>
+                                <td><strong>1.2.0</strong></td>
+                                <td>May 30, 2026</td>
+                                <td>Initial comprehensive privacy policy</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <!-- FINAL NOTE -->
+                <div class="highlight success">
+                    <strong>🔐 Your privacy is our priority.</strong><br>
+                    QRScannerPro respects your data by collecting only what's necessary. We've designed this app with privacy-first principles. If you don't agree with our privacy practices, please do not use the app. We welcome feedback at <a href="mailto:nexeldor@gmail.com">nexeldor@gmail.com</a>.
+                </div>
+
+                <div style="text-align: center; margin: 40px 0 20px; padding: 20px; background: var(--neutral-100); border-radius: var(--radius-md);">
+                    <p style="margin-bottom: 12px; font-size: 0.9em; color: var(--text-secondary);">
+                        📄 <strong>Latest Version:</strong> <a href="https://github.com/panosgdev/qrscannerpro-privacy-policy" target="_blank" style="color: var(--primary);">QRScannerPro Privacy Policy Repository</a>
+                    </p>
+                    <p style="margin: 0; font-size: 0.8em; color: var(--text-secondary);">
+                        Document ID: QSP-PP-1.3.0-2026-06-09 | Next Review: June 9, 2027
+                    </p>
+                </div>
+            </div>
+
+            <!-- PAGE FOOTER -->
+            <footer class="page-footer">
+                <p>&copy; 2026 QRScannerPro. All rights reserved.</p>
+                <p><a href="#">Privacy Policy v1.3.0</a> | <a href="https://github.com/panosgdev/QRScannerPro" target="_blank">GitHub Repository</a></p>
+                <div class="footer-meta">
+                    <p>This privacy policy is designed to comply with GDPR, CCPA, COPPA, and CalOPPA regulations.</p>
+                    <p>Effective Date: June 9, 2026</p>
+                </div>
+            </footer>
         </main>
-        
-        <footer>
-            <p>&copy; 2026 QRScannerPro. All rights reserved. | <a href="#" style="color: #667eea; text-decoration: none;">Privacy Policy</a></p>
-        </footer>
     </div>
+
+    <script>
+        // Smooth scroll navigation
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = this.getAttribute('href');
+                document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+                document.querySelector(target).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // Update active nav on scroll
+        window.addEventListener('scroll', () => {
+            let current = '';
+            document.querySelectorAll('section').forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
